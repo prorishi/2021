@@ -1,0 +1,114 @@
+@font-face {
+    font-family: Monoton;
+    src: url(../fonts/Monoton.ttf) format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    color: #ffebcd;
+    font-family: "Monoton", cursive;
+    text-align: center;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #333;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+}
+#preloader div {
+    width: 50px;
+    height: 50px;
+    background: #eee;
+    margin: 0 1.2em;
+    border-radius: 50%;
+    animation: wave 2s infinite;
+}
+
+#preloader div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+#preloader div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+#preloader div:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+#container {
+    position: relative;
+    width: 70%;
+    border: 2vh double cornsilk;
+    border-radius: 3vh;
+}
+
+#loader {
+    border-radius: 1vh;
+    margin: 1%;
+    position: absolute;
+    height: 94.5%;
+    top: 0;
+    left: 0;
+    background-image: url(../images/cover.jpg);
+    background-repeat: repeat-x;
+}
+
+#year {
+    height: 100%;
+    font-size: 5em;
+}
+
+button {
+    background: transparent;
+    padding: 2vh 3vw;
+    border: 1vh double blanchedalmond;
+    border-radius: 1vh;
+    font-size: large;
+    outline: none;
+    word-spacing: 1em;
+}
+
+img {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+@keyframes cover {
+    from {
+        width: 0;
+    }
+    to {
+        width: 98%;
+    }
+}
+
+@keyframes wave {
+    0% {
+        scale: 1;
+        opacity: 1;
+    }
+    50% {
+        scale: 1.7;
+        opacity: 0.08;
+    }
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
